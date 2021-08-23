@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAEA;;4BAE4B;AAG1B,QAAQ;AAWV,oBAAoB;AAKpB,SAAS;AAYT,QAAQ",
+    "sources": [
+        "setting.sass"
+    ],
+    "names": [],
+    "file": "setting.css"
+}

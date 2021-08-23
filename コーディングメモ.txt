@@ -1,0 +1,65 @@
+ベーススタイリング
+
+レイアウト
+
+モジュールを意識
+
+
+使い回せること
+予測できること
+今の所これ
+
+Sassでやってみる
+
+部品はmixinで。
+
+
+見た目とJSのクラス（ID）を分ける
+
+block-部品
+見た目じゃなく、なんのために使用されるのか
+エレメントが集まってブロック
+
+最後に一つのシートにスタイルをまとめる
+
+<span class="sb"></span>
+
+    position: absolute;
+    bottom: -5vw;
+    border-top: 5vw #000 solid;
+    border-left: 6.5vw solid transparent;
+    border-right: 6.5vw solid transparent;
+
+
+
+
+        content: "";
+    width: 13vw;
+    height: 5vw;
+    top: -5vw;
+    left: -6.5vw;
+
+
+after
+
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: transparent 50px solid;
+    border-left: 65px solid #454c53;
+    border-right: 65px solid #454c53;
+    position: absolute;
+    top: -50px;
+    left: -65px;
+    right: 0;
+    margin: auto;
+
+
+
+
+
+        border-top: transparent 5vw solid;
+    border-left: 6.5vw solid #454c53;
+    border-right: 6.5vw solid #454c53;
+    top: -5vw;
+    left: -6.5vw;
