@@ -33,7 +33,17 @@ h2 {
   color: #fbd817;
   font-style: normal;
   font-size: 3.6rem;
+  /*------------------------
+          変数
+    -----------------------*/
+  /*icon*/
   margin-bottom: 38px;
+}
+
+@media (min-width: 520px) {
+  h2 {
+    font-size: 4rem;
+  }
 }
 
 h3 {
@@ -78,6 +88,7 @@ footer {
 
 /*humberger*/
 .humberger {
+  display: block;
   position: fixed;
   background: #1e1c1c;
   width: 50px;
@@ -86,6 +97,12 @@ footer {
   top: 0;
   z-index: 10;
   /*navSPのとき*/
+}
+
+@media (min-width: 960px) {
+  .humberger {
+    display: none;
+  }
 }
 
 .humberger span.humberger-line {
@@ -128,8 +145,13 @@ footer {
 }
 
 /*PC以上の時*/
+.nav_menu_PC {
+  display: none;
+}
+
 @media (min-width: 960px) {
   .nav_menu_PC {
+    display: block;
     padding: 25px 0px;
   }
 }
@@ -143,8 +165,10 @@ footer {
           justify-content: center;
 }
 
-.nav_menu_PC li {
-  margin-right: 40px;
+@media (min-width: 960px) {
+  .nav_menu_PC li {
+    margin-right: 40px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -342,6 +366,7 @@ footer {
 
 .midokoro01 {
   position: relative;
+  margin-bottom: 82px;
   /*------------------------
           変数
     -----------------------*/
@@ -375,8 +400,8 @@ footer {
 
 .catch-niman {
   position: absolute;
-  top: -70px;
-  left: -2vw;
+  top: -100px;
+  left: -14vw;
   /*------------------------
           変数
     -----------------------*/
@@ -392,8 +417,8 @@ footer {
 
 .catch-suijo {
   position: absolute;
-  top: -40px;
-  right: -1vw;
+  top: -74px;
+  right: -8vw;
   /*------------------------
           変数
     -----------------------*/
@@ -564,6 +589,10 @@ a.ticket_button:hover {
   }
 }
 
+.ferry-img01_sp {
+  margin-bottom: 38px;
+}
+
 .access_ferry-info {
   padding-top: 90px;
   background: #fff;
@@ -699,15 +728,21 @@ iframe {
           justify-content: center;
   max-width: 500px;
   width: 50%;
+  /*SNS*/
 }
 
-.banner-wrap {
+.banner-area a {
   background: url("../image/banner.png");
   max-width: 500px;
   height: 80px;
   line-height: 80px;
   margin-bottom: 20px;
-  /*SNS*/
+}
+
+@media (min-width: 960px) {
+  .banner-area a:hover {
+    background: url("../image/bg-hanabi.png");
+  }
 }
 
 .footer_snsIconArea {

@@ -76,6 +76,8 @@ h2
   color: #fbd817
   font-style: normal
   font-size: 3.6rem
+  +tab
+    font-size: 4rem
   margin-bottom: 38px
 
 h3
@@ -112,6 +114,7 @@ footer
 
 /*humberger*/
 .humberger
+  display: block
   position: fixed
   background: #1e1c1c
   width: 50px
@@ -119,6 +122,8 @@ footer
   right: 0
   top: 0
   z-index: 10
+  +pc
+    display: none
 
   span.humberger-line
     display: inline-block
@@ -135,23 +140,24 @@ footer
     &:nth-of-type(3)
       top: 31px
 
-
   /*navSPのとき*/
 .nav_menu_SP
-    max-width: 90%
-    text-align: center
-    height: 100vh
-    background-color: #1e2c4d
-    padding: 30px
-    display: none    
-    ul.menu
-      margin-top: 38px 
-      li
-        margin-bottom: 38px
+  max-width: 90%
+  text-align: center
+  height: 100vh
+  background-color: #1e2c4d
+  padding: 30px
+  display: none    
+  ul.menu
+    margin-top: 38px 
+    li
+      margin-bottom: 38px
 
 /*PC以上の時*/
 .nav_menu_PC
+  display: none
   +pc
+    display: block
     padding: 25px 0px
   ul.menu
     +pc
@@ -159,7 +165,7 @@ footer
     justify-content: center
   li
     +pc
-    margin-right: 40px
+      margin-right: 40px
   a
     +pc
       &:hover
@@ -280,13 +286,14 @@ footer
       img
         width: 100%
         +tab
-          width: 320px
+          width: 320px 
           height: 300px
           object-fit: cover
 
 
 .midokoro01
   position: relative
+  margin-bottom: 82px
   +tab
   flex-direction: row-reverse
 .midokoro02
@@ -298,16 +305,16 @@ footer
     margin-top: 118px
 .catch-niman
   position: absolute
-  top: -70px
-  left: -2vw
+  top: -100px
+  left: -14vw
   +tab
     top: -100px
     left: -1%
 
 .catch-suijo
   position: absolute
-  top: -40px
-  right: -1vw
+  top: -74px
+  right: -8vw
   +tab
     top: -66px
     right: -2vw
@@ -404,7 +411,8 @@ a.ticket_button
   display: block
   +tab
     display: none
-
+.ferry-img01_sp
+  margin-bottom: 38px
 .access_ferry-info
   padding-top: 90px 
   background: #fff
@@ -494,12 +502,15 @@ iframe
   justify-content: center
   max-width: 500px
   width: 50%
-.banner-wrap
-  background: url('../image/banner.png')
-  max-width: 500px
-  height: 80px
-  line-height: 80px
-  margin-bottom: 20px
+  a
+    background: url('../image/banner.png')
+    max-width: 500px
+    height: 80px
+    line-height: 80px
+    margin-bottom: 20px
+    +pc
+      &:hover
+        background: url('../image/bg-hanabi.png')
 
   /*SNS*/
 .footer_snsIconArea
