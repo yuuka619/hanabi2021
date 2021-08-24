@@ -63,3 +63,5 @@ after
     border-right: 6.5vw solid #454c53;
     top: -5vw;
     left: -6.5vw;
+
+    <img src="image/icon01@2x.png" alt="花火アイコン">

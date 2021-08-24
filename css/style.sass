@@ -33,7 +33,10 @@ $tab: 520px // タブレット
 
 /*background-image*/
 =bg-hanabi
-  background: url("../image/bg-hanabi@2x.png") no-repeat bottom
+  background-image: url("../image/bg-hanabi@2x.png") 
+  background-repeat: no-repeat
+ 
+
 
 /*arrow*/
 =arrow
@@ -86,6 +89,9 @@ h3
 section
   text-align: center
   padding: 80px 20px 0
+  margin: 0 0 60px 0
+  +tab
+    margin: 0 0 120px 0
 
 footer
   width: 100%
@@ -100,6 +106,9 @@ footer
 
 .header_inner
   width: 100%
+  +pc
+  margin: 0 auto
+  max-width: 1024px 
 
 /*humberger*/
 .humberger
@@ -127,8 +136,8 @@ footer
       top: 31px
 
 
-  /*navは表示非表示を指定しよう*/
-.nav_menu
+  /*navSPのとき*/
+.nav_menu_SP
     max-width: 90%
     text-align: center
     height: 100vh
@@ -139,7 +148,47 @@ footer
       margin-top: 38px 
       li
         margin-bottom: 38px
+
+/*PC以上の時*/
+.nav_menu_PC
+  +pc
+    padding: 25px 0px
+  ul.menu
+    +pc
+    display: flex
+    justify-content: center
+  li
+    +pc
+    margin-right: 40px
+  a
+    +pc
+      &:hover
+        -webkit-animation: neon5 1.5s ease-in-out infinite alternate
+        -moz-animation: neon5 1.5s ease-in-out infinite alternate
+        animation: neon5 1.5s ease-in-out infinite alternate
+
+@-webkit-keyframes neon5
+  from 
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9900,
+    0 0 70px #ff9900, 0 0 80px #ff9900, 0 0 100px #ff9900, 0 0 150px #ff9900
+  to 
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9900, 0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900
   
+@-moz-keyframes neon5
+  from
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9900, 0 0 70px #ff9900, 0 0 80px #ff9900, 0 0 100px #ff9900, 0 0 150px #ff9900
+  
+  to
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9900, 0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900
+
+@keyframes neon5
+  from
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9900, 0 0 70px #ff9900, 0 0 80px #ff9900, 0 0 100px #ff9900, 0 0 150px #ff9900
+  to 
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9900, 0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900
+
+
+
 /*------------------------
           FV
   ------------------------*/
@@ -195,6 +244,11 @@ footer
 /*------------------------
         見どころ
   -----------------------*/
+.midokoro_inner
+  +bg-hanabi
+  background-size: 20%
+  background-position: right top
+
 .flexbox_pc
   +tab
     width: 50%
@@ -208,7 +262,6 @@ footer
     display: flex
     justify-content: center
     align-items: flex-end
-
   h3 + p
     span
       font-family: ten-mincho,serif
@@ -297,6 +350,8 @@ a.ticket_button
   background: rgba(255, 255, 255, 0.8)
   border-radius: 18px
   padding: 38px 12px 98px
+  max-width: 600px
+  margin: 0 auto
 
 .gaiyou_wraper
   display: inline-block
@@ -325,7 +380,6 @@ a.ticket_button
         アクセス
     -----------------------*/
 
-
 .access_inner
   position: relative
 
@@ -352,7 +406,7 @@ a.ticket_button
     display: none
 
 .access_ferry-info
-  padding-top: 60px 
+  padding-top: 90px 
   background: #fff
   color: #1e1c1c
   margin: 0 calc(50% - 50vw)
@@ -376,7 +430,6 @@ a.ticket_button
 	width: 100%
 	padding-top: 56.25%
 
-
 iframe
   position: absolute
   top: 0
@@ -385,20 +438,24 @@ iframe
   height: 100%
   max-height: 650px
 
-
 .ship_bg
   background: url("../image/ship@2x.png") no-repeat center bottom
   background-size: contain
   width: 120px
   height: 120px
   display: inline-block
+  position: relative
+  top: 50px
 
 /*------------------------
       必ずお読みください
   -----------------------*/
-
-.attention_wrapper
+.section-attention
   +bg-hanabi
+  +tab
+  background-position: right bottom
+  background-size: 26%
+.attention_wrapper
   padding-bottom: 120px
 .attention > li
   +icon
@@ -423,6 +480,12 @@ iframe
     li
       font-size: 1.5rem
       margin-bottom: 36px
+      a
+        +pc
+          &:hover
+            -webkit-animation: neon5 1.5s ease-in-out infinite alternate
+            -moz-animation: neon5 1.5s ease-in-out infinite alternate
+            animation: neon5 1.5s ease-in-out infinite alternate
 
   /*バナーエリア*/
 .banner-area
