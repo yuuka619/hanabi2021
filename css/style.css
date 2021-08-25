@@ -401,7 +401,7 @@ footer {
 .catch-niman {
   position: absolute;
   top: -100px;
-  left: -14vw;
+  left: -30vw;
   /*------------------------
           変数
     -----------------------*/
@@ -418,7 +418,7 @@ footer {
 .catch-suijo {
   position: absolute;
   top: -74px;
-  right: -8vw;
+  right: -16px;
   /*------------------------
           変数
     -----------------------*/
