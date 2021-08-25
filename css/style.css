@@ -44,12 +44,12 @@ h2 {
   /*------------------------
           変数
     -----------------------*/
-  margin-bottom: 38px;
 }
 
 @media (min-width: 520px) {
   h2 {
     font-size: 4rem;
+    margin-bottom: 38px;
   }
 }
 
@@ -73,7 +73,6 @@ section {
 
 @media (min-width: 520px) {
   section {
-    max-width: 1024px;
     margin: 0 auto 120px;
   }
 }
@@ -241,14 +240,14 @@ footer {
   }
 }
 
-.mainImage-area .mainImage_wrapper:after {
+.mainImage_wrapper:after {
   /*------------------------
           変数
     -----------------------*/
 }
 
 @media (min-width: 520px) {
-  .mainImage-area .mainImage_wrapper:after {
+  .mainImage_wrapper:after {
     content: '';
     display: block;
     position: absolute;
@@ -260,6 +259,11 @@ footer {
     background-size: 4px 4px;
     background-position: 0 0, 2px 2px;
   }
+}
+
+.fixed {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .mainImage-logo {
@@ -339,6 +343,11 @@ footer {
 /*------------------------
         見どころ
   -----------------------*/
+.section-midokoro {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .midokoro_inner {
   background-image: url("../image/bg-hanabi@2x.png");
   background-repeat: no-repeat;
@@ -526,12 +535,12 @@ a.ticket_button:hover {
         大会概要
   -----------------------*/
 .section-gaiyou {
-  width: 100%;
   height: auto;
-  background: url(../image/asset05.jpg) no-repeat left center;
+  background: url(../image/asset05.jpg) no-repeat left center/cover;
   -o-object-fit: contain;
      object-fit: contain;
   padding-bottom: 80px;
+  width: 100vw;
 }
 
 .hanabi-bg {

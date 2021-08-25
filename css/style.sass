@@ -80,7 +80,7 @@ h2
   font-size: 3.6rem
   +tab
     font-size: 4rem
-  margin-bottom: 38px
+    margin-bottom: 38px
 
 h3
   font-family: ten-mincho,serif
@@ -95,7 +95,6 @@ section
   padding: 80px 20px 0
   margin: 0 0 60px 0
   +tab
-    max-width: 1024px
     margin: 0 auto 120px
 
 footer
@@ -219,7 +218,6 @@ footer
   +tab
     height: 650px
     background: none
-
   #bg-Fireworks
     display: none
     +tab
@@ -229,20 +227,23 @@ footer
       left: 50%
       transform: translate(-50%, -50%)
 
-  .mainImage_wrapper
-    &:after 
-      +tab
-        content: ''
-        display: block
-        position: absolute
-        top: 0
-        right: 0
-        width: 100%
-        height: 100vh
-        background-color:rgba(0,0,0,0.5)
-        background-image: radial-gradient(#111 30%, transparent 31%), radial-gradient(#111 30%, transparent 31%)
-        background-size: 4px 4px
-        background-position: 0 0, 2px 2px
+.mainImage_wrapper
+  &:after 
+    +tab
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100vh
+      background-color:rgba(0,0,0,0.5)
+      background-image: radial-gradient(#111 30%, transparent 31%), radial-gradient(#111 30%, transparent 31%)
+      background-size: 4px 4px
+      background-position: 0 0, 2px 2px
+
+.fixed
+  position: sticky
 
 
 .mainImage-logo
@@ -290,6 +291,9 @@ footer
 /*------------------------
         見どころ
   -----------------------*/
+.section-midokoro
+  max-width: 1024px
+  margin: 0 auto
 .midokoro_inner
   +bg-hanabi
   background-size: 20%
@@ -388,12 +392,14 @@ a.ticket_button
 /*------------------------
         大会概要
   -----------------------*/
+
 .section-gaiyou
-  width: 100%
   height: auto
-  background: url(../image/asset05.jpg) no-repeat left center
+  background: url(../image/asset05.jpg) no-repeat left center / cover
   object-fit: contain
   padding-bottom: 80px
+  width: 100vw
+
 .hanabi-bg
   background: rgba(255, 255, 255, 0.8)
   border-radius: 18px
