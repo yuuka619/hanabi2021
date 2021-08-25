@@ -65,3 +65,56 @@ after
     left: -6.5vw;
 
     <img src="image/icon01@2x.png" alt="花火アイコン">
+
+     width="364" height="159"
+
+
+
+/*----------------------
+        メディアクエリ
+  ---------------------*/
+$pc: 960px // PC
+$tab: 520px // タブレット
+
+=pc
+  @media (min-width: ($pc)) 
+    @content
+
+
+=tab
+  @media (min-width: ($tab)) 
+    @content
+    
+  
+  /*------------------------
+          変数
+    -----------------------*/
+
+  /*icon*/
+=icon
+  &:before
+    content: ""
+    background: url('../image/icon01@2x.png') 
+    background-size: contain
+    width: 16px
+    height: 16px
+    display: inline-block
+    margin-right: 4px
+
+/*background-image*/
+=bg-hanabi
+  background-image: url("../image/bg-hanabi@2x.png") 
+  background-repeat: no-repeat
+
+
+/*arrow*/
+=arrow
+  bottom: -96px
+  left: 0
+  right: 0
+  margin: auto
+  border-top: 36px #1e1c1c solid
+  border-left: 65px solid transparent
+  border-right: 65px solid transparent
+  display: block
+  width: 0

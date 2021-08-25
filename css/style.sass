@@ -5,7 +5,6 @@
 $pc: 960px // PC
 $tab: 520px // タブレット
 
-
 =pc
   @media (min-width: ($pc)) 
     @content
@@ -20,7 +19,7 @@ $tab: 520px // タブレット
           変数
     -----------------------*/
 
-  /*icon*/
+
 =icon
   &:before
     content: ""
@@ -35,7 +34,6 @@ $tab: 520px // タブレット
 =bg-hanabi
   background-image: url("../image/bg-hanabi@2x.png") 
   background-repeat: no-repeat
- 
 
 
 /*arrow*/
@@ -49,7 +47,6 @@ $tab: 520px // タブレット
   border-right: 65px solid transparent
   display: block
   width: 0
-
 /*------------------------
           共通パーツ
   ------------------------*/
@@ -66,10 +63,15 @@ body
 img
   max-width: 100%
 
+header
+  background-color: rgba(30,28,28,0.4)
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
 main
-  max-width: 1024px
-  margin: 0 auto
-
+    margin: 0 auto
 h2
   font-family: ta-f1blockline, sans-serif
   font-weight: 400
@@ -93,13 +95,13 @@ section
   padding: 80px 20px 0
   margin: 0 0 60px 0
   +tab
-    margin: 0 0 120px 0
+    max-width: 1024px
+    margin: 0 auto 120px
 
 footer
   width: 100%
   background-color: #1e2c4d
 
-/*style*/
 
 
 /*------------------------
@@ -107,7 +109,6 @@ footer
   ------------------------*/
 
 .header_inner
-  width: 100%
   +pc
   margin: 0 auto
   max-width: 1024px 
@@ -152,6 +153,10 @@ footer
     margin-top: 38px 
     li
       margin-bottom: 38px
+
+  /*スマホactive時*/
+
+
 
 /*PC以上の時*/
 .nav_menu_PC
@@ -198,23 +203,57 @@ footer
 /*------------------------
           FV
   ------------------------*/
-.mainImage_wrapper
+// .mainImage_wrapper
+//   background: url('../image/asset_01.jpg') center / cover
+//   position: relative
+//   width: 100%
+//   height: 90vh
+//   +tab
+//     max-height: 650px
+.mainImage-area
+  background: url('../image/asset_01.jpg') center / cover
   position: relative
-
-
-
-.hanabiFV01
-  height: 70vh
-  max-height: 700px
   width: 100%
-  max-width: 100%
-  object-fit: cover
+  height: 80vh
+  overflow: hidden
+  +tab
+    height: 650px
+    background: none
+
+  #bg-Fireworks
+    display: none
+    +tab
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  .mainImage_wrapper
+    &:after 
+      +tab
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100vh
+        background-color:rgba(0,0,0,0.5)
+        background-image: radial-gradient(#111 30%, transparent 31%), radial-gradient(#111 30%, transparent 31%)
+        background-size: 4px 4px
+        background-position: 0 0, 2px 2px
+
+
 
 .mainImage-logo
   position: absolute
   inset: 0
   margin: auto
+  min-width: 255px
+  max-width: 30vw
 
+ 
 /*------------------------
         topMessage 
   -----------------------*/
@@ -256,6 +295,7 @@ footer
   background-position: right top
 
 .flexbox_pc
+  margin-top: 10px
   +tab
     width: 50%
     padding: 0  32px
@@ -306,7 +346,7 @@ footer
 .catch-niman
   position: absolute
   top: -100px
-  left: -30vw
+  left: -3vw
   +tab
     top: -100px
     left: -1%
@@ -398,6 +438,7 @@ a.ticket_button
 .access_ferry
   margin-bottom: 76px
 .access_ferry-daifuku
+  margin-bottom: 38px
   +tab
     position: relative
     margin-bottom: 26px
@@ -411,8 +452,7 @@ a.ticket_button
   display: block
   +tab
     display: none
-.ferry-img01_sp
-  margin-bottom: 38px
+
 .access_ferry-info
   padding-top: 90px 
   background: #fff

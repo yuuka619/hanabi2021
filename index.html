@@ -41,12 +41,12 @@
           <nav class="nav_menu_SP">
             <img src="image/icon01@2x.png" alt="花火アイコン">
             <ul class="menu">
-              <li><a href="#">TOP</a></li>
-              <li><a href="#">更新情報</a></li>
-              <li><a href="#">見どころ</a></li>
-              <li><a href="#">大会概要</a></li>
-              <li><a href="#">チケット購入</a></li>
-              <li><a href="#">アクセス</a></li>
+              <li><a href="#main">TOP</a></li>
+              <li><a href="#news">更新情報</a></li>
+              <li><a href="#midokoro">見どころ</a></li>
+              <li><a href="#gaiyou">大会概要</a></li>
+              <li><a href="#ticket">チケット購入</a></li>
+              <li><a href="#access">アクセス</a></li>
               <li><a href="#">協賛企業一覧</a></li>
             </ul>
             <img src="image/icon01@2x.png" alt="花火アイコン">
@@ -55,155 +55,156 @@
         <div class="header_inner header_inner_PC">
           <nav class="nav_menu_PC">
             <ul class="menu">
-              <li><a href="#">TOP</a></li>
-              <li><a href="#">更新情報</a></li>
-              <li><a href="#">見どころ</a></li>
-              <li><a href="#">大会概要</a></li>
+              <li><a href="#main">TOP</a></li>
+              <li><a href="#news">更新情報</a></li>
+              <li><a href="#midokoro">見どころ</a></li>
+              <li><a href="#gaiyou">大会概要</a></li>
               <li><a href="#">チケット購入</a></li>
-              <li><a href="#">アクセス</a></li>
+              <li><a href="#access">アクセス</a></li>
               <li><a href="#">協賛企業一覧</a></li>
             </ul>
           </nav>
         </div><!--headerPC-->
       </header>
-      <main>
+      <main class="main" id="main">
         <div class="mainImage-area">
           <div class="mainImage_wrapper">
-            <img src="image/asset_01.jpg" alt="花火画像01" class="hanabiFV01">
-            <div class="logo_wrap">
-              <img src="image/logo02.png" alt="ロゴ画像" class="mainImage-logo" width="364" height="159">
-            </div>
-          </div><!--mainImagearea-->
-          <section class="topMessage">
-            <div class="topMessage-catch">
-              <h3>色褪せない夏の思い出を</h3>
-              <p>第8回目を迎える星駆花火大会。<br>
-                盆踊り大会のフィナーレとして地元住民に愛されてきました。
-                今や全国から沢山の観光客が訪れ………<br>
-                今年はさらにパワーアップし、合計2万発の花火が打ちあがる一大イベントです。<br><br>
+            <!-- <img src="image/asset_01.jpg" alt="花火画像01" class="hanabiFV01"> -->
+            <video id="bg-Fireworks" src="image/Fireworks.mp4" poster="image/asset_01.jpg" controls autoplay loop muted></video>
+          </div>
+          <div class="logo_wrap">
+            <img src="image/logo02.png" alt="ロゴ画像" class="mainImage-logo">
+          </div><!--logo_wrap-->
+        </div><!--mainImage-area-->  
+        <section class="topMessage">
+          <div class="topMessage-catch">
+            <h3>色褪せない夏の思い出を</h3>
+            <p>第8回目を迎える星駆花火大会。<br>
+              盆踊り大会のフィナーレとして地元住民に愛されてきました。
+              今や全国から沢山の観光客が訪れ………<br>
+              今年はさらにパワーアップし、合計2万発の花火が打ちあがる一大イベントです。<br><br>
 
-                例年とは違ったコロナ禍での開催。<br>
-                この日だけは、沢山の事が制限された日常を忘れてお楽しみください…！
-              </p>
-            </div><!--topMessage-->
-            <span class="scroll">scroll>></span>
-          </section>
-          <section>
-            <div class="news_wrapper">
-              <h2>更新情報</h2>
-              <dl>
-                <dt>2021.8.01</dt>
-                <dd>本年度の花火大会は開催中止と決定いたしました</dd>
-                <dt>2021.8.01</dt>
-                <dd>公式サイトを更新いたしました</dd>
-              </dl>
-            </div>
-          </section>
-          <section>
-            <div class="midokoro_inner">
-              <h2>見どころ</h2>
-              <div class="top-midokoro midokoro01">
-                <img src="image/asset_niman.png" class="catch-niman" alt="打ち上げ総数2万発" width="260px">
-                <div class="top-midokoro_imageWrap">
-                  <img src="image/asset_02.jpg" alt="花火の写真">
-                </div>
-                <div class="flexbox_pc">
-                  <h3>島全体を彩る大迫力<br>打ち上げ総数2万発</h3>
-                  <p>
-                    テキストが入りますここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにテキストが入りますここにテキストが入りますここに…
-                    ここにテキストが入りますここにここにテキストが入りますここにここにテキストが入ります
-                  </p>
-                </div>
-              </div><!--top-midokoro-->
-              <div class="top-midokoro midokoro02">
-                <img src="image/suijo.logo.png" class="catch-suijo" alt="水上観覧"  width="380vw">
-                <div class="top-midokoro_imageWrap">
-                  <img src="image/asset04-1jpg-min.jpg" alt="花火の写真">
-                </div>
-                <div class="flexbox_pc">
-                  <h3>クルーズ船から眺める<br>特別な光景</h3>
-                  <p>
-                    ここにテキストが入りますここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにトが入りますここにテキストが入りますここに…<br>
-                    <span>指定席：お一人様￥3,000</span>
-                  </p>
-                  <p class="utentyuchi">※雨天中止</p>
-                </div>
+              例年とは違ったコロナ禍での開催。<br>
+              この日だけは、沢山の事が制限された日常を忘れてお楽しみください…！
+            </p>
+          </div><!--topMessage-->
+          <span class="scroll">scroll>></span>
+        </section>
+        <section id="news">
+          <div class="news_wrapper">
+            <h2>更新情報</h2>
+            <dl>
+              <dt>2021.8.01</dt>
+              <dd>本年度の花火大会は開催中止と決定いたしました</dd>
+              <dt>2021.8.01</dt>
+              <dd>公式サイトを更新いたしました</dd>
+            </dl>
+          </div>
+        </section>
+        <section id="midokoro">
+          <div class="midokoro_inner">
+            <h2>見どころ</h2>
+            <div class="top-midokoro midokoro01">
+              <img src="image/asset_niman.png" class="catch-niman" alt="打ち上げ総数2万発" width="260px">
+              <div class="top-midokoro_imageWrap">
+                <img src="image/asset_02.jpg" alt="花火の写真">
               </div>
-              <a href="#" class="ticket_button">チケットをお求めの方はコチラ</a>
-            </div>
-          </section>
-          <section class="section-gaiyou">
-            <div class="hanabi-bg">
-              <div class="gaiyou_wraper">
-                <h2>大会概要</h2>
-                  <dl>
-                    <dt>開催日</dt><dd>2021.8.29 (日)</dd>
-                  </dl>
-                  <dl>
-                    <dt>打上時間</dt><dd>19:00～21:00</dd>
-                  </dl>
-                  <dl>  
-                    <dt>場所</dt><dd>岡山県笠岡市北木島星駆町</dd>
-                  </dl>
+              <div class="flexbox_pc">
+                <h3>島全体を彩る大迫力<br>打ち上げ総数2万発</h3>
+                <p>
+                  テキストが入りますここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにテキストが入りますここにテキストが入りますここに…
+                  ここにテキストが入りますここにここにテキストが入りますここにここにテキストが入ります
+                </p>
+              </div>
+            </div><!--top-midokoro-->
+            <div class="top-midokoro midokoro02">
+              <img src="image/suijo.logo.png" class="catch-suijo" alt="水上観覧"  width="380vw">
+              <div class="top-midokoro_imageWrap">
+                <img src="image/asset04-1jpg-min.jpg" alt="花火の写真">
+              </div>
+              <div class="flexbox_pc">
+                <h3>クルーズ船から眺める<br>特別な光景</h3>
+                <p>
+                  ここにテキストが入りますここにテキストが入りますここにここにテキストが入りますここにここにテキストが入りますここにここにトが入りますここにテキストが入りますここに…<br>
+                  <span>指定席：お一人様￥3,000</span>
+                </p>
+                <p class="utentyuchi">※雨天中止</p>
               </div>
             </div>
-          </section>
-          <section class="access">
-            <div class="access_wrapper">
-              <div class="access_inner">
-                <h2>アクセス</h2>
-                <div class="access_ferry fetty-img_SP">
-                  <div class="access_ferry-daifuku">
-                    <img src="image/ferryInfo01@2x.png" alt="フェリー時刻業" class="ferry-img01_sp">
-                  </div>
-                  <div class="access_ferry-kanefuro">
-                    <img src="image/ferryinfo02@2x.png" alt="">
-                  </div>
-                </div><!--access_ferrySP-->
-                <div class="access_ferry fetty-img_PC">
-                  <div class="access_ferry-daifuku">
-                    <img src="image/access_PC@2x.png" alt="フェリー時刻業">
-                  </div>
-                </div><!--access_ferryPC-->
-                <span class="arrow_bg"></span>
-              </div>  
-              <div class="access_ferry-info">
-                <div class="access_ferry-info_ships">
-                  <p>※詳しくは<span class="strong">各フェリー運航会社の時刻表</span>をご確認ください。</p>
-                  <p>▼</p>
-                  <p class="ferryConpany"><a href="#">大福丸　有限会社笹岡フェリー</a></p>
-                  <p class="ferryConpany"><a href="#">金風呂丸　瀬戸内中央観光汽船</a></p>
-                  <p class="ferryConpany"><a href="#">旅客船　三洋汽船</a></p>
-                </div>
-                <div class="map_wrapper">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52680.684220657204!2d133.49246726704587!3d34.38754783749705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35516dbe396dfd5f%3A0x59950f428758ede2!2z44CSNzE0LTAzMDEg5bKh5bGx55yM56yg5bKh5biC5YyX5pyo5bO255S6!5e0!3m2!1sja!2sjp!4v1629697765426!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-              </div>    
-            </div><!--access_wrapper-->
-            <div class="ship_bg"></div>
-          </section>
-          <section class="section-attention">
-            <div class="attention_wrapper">
-              <h2>※必ずお読みください</h2>
-              <ul class="attention">
-                <li>大会中止・延期の際はこちらのHPでお知らせいたします</li>
-                <li>三洋汽船運航の旅客戦は帰りの便はございません。ご注意ください</li>
-                <li>コロナウイルス蔓延防止のためマスクの着用にご協力ください　</li>
-              </ul>
+            <a href="#" class="ticket_button">チケットをお求めの方はコチラ</a>
+          </div>
+        </section>
+        <section class="section-gaiyou" id="gaiyou">
+          <div class="hanabi-bg">
+            <div class="gaiyou_wraper">
+              <h2>大会概要</h2>
+                <dl>
+                  <dt>開催日</dt><dd>2021.8.29 (日)</dd>
+                </dl>
+                <dl>
+                  <dt>打上時間</dt><dd>19:00～21:00</dd>
+                </dl>
+                <dl>  
+                  <dt>場所</dt><dd>岡山県笠岡市北木島星駆町</dd>
+                </dl>
             </div>
-          </section>
-        </div><!--bodyinner-->
+          </div>
+        </section>
+        <section class="access" id="access">
+          <div class="access_wrapper">
+            <div class="access_inner">
+              <h2>アクセス</h2>
+              <div class="access_ferry fetty-img_SP">
+                <div class="access_ferry-daifuku">
+                  <img src="image/ferryInfo01@2x.png" alt="フェリー時刻業" class="ferry-img01_sp">
+                </div>
+                <div class="access_ferry-kanefuro">
+                  <img src="image/ferryinfo02@2x.png" alt="">
+                </div>
+              </div><!--access_ferrySP-->
+              <div class="access_ferry fetty-img_PC">
+                <div class="access_ferry-daifuku">
+                  <img src="image/access_PC@2x.png" alt="フェリー時刻業">
+                </div>
+              </div><!--access_ferryPC-->
+              <span class="arrow_bg"></span>
+            </div>  
+            <div class="access_ferry-info">
+              <div class="access_ferry-info_ships">
+                <p>※詳しくは<span class="strong">各フェリー運航会社の時刻表</span>をご確認ください。</p>
+                <p>▼</p>
+                <p class="ferryConpany"><a href="#">大福丸　有限会社笹岡フェリー</a></p>
+                <p class="ferryConpany"><a href="#">金風呂丸　瀬戸内中央観光汽船</a></p>
+                <p class="ferryConpany"><a href="#">旅客船　三洋汽船</a></p>
+              </div>
+              <div class="map_wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52680.684220657204!2d133.49246726704587!3d34.38754783749705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35516dbe396dfd5f%3A0x59950f428758ede2!2z44CSNzE0LTAzMDEg5bKh5bGx55yM56yg5bKh5biC5YyX5pyo5bO255S6!5e0!3m2!1sja!2sjp!4v1629697765426!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>    
+          </div><!--access_wrapper-->
+          <div class="ship_bg"></div>
+        </section>
+        <section class="section-attention">
+          <div class="attention_wrapper">
+            <h2>※必ずお読みください</h2>
+            <ul class="attention">
+              <li>大会中止・延期の際はこちらのHPでお知らせいたします</li>
+              <li>三洋汽船運航の旅客戦は帰りの便はございません。ご注意ください</li>
+              <li>コロナウイルス蔓延防止のためマスクの着用にご協力ください</li>
+            </ul>
+          </div>
+        </section>
       </main>
       <footer>
         <div class="footer_inner">
           <div class="footer-flexbox">
             <ul class="footer-menu">
-              <li><a href="#">TOP</a></li>
-              <li><a href="#">更新情報</a></li>
-              <li><a href="#">見どころ</a></li>
-              <li><a href="#">大会概要</a></li>
-              <li><a href="#">チケット購入</a></li>
-              <li><a href="#">アクセス</a></li>
+              <li><a href="#top">TOP</a></li>
+              <li><a href="#news">更新情報</a></li>
+              <li><a href="#midokoro">見どころ</a></li>
+              <li><a href="#gaiyou">大会概要</a></li>
+              <li><a href="#ticket">チケット購入</a></li>
+              <li><a href="#access">アクセス</a></li>
               <li><a href="#">協賛企業一覧</a></li>
             </ul>
             <div class="banner-area">
