@@ -66,10 +66,7 @@ img
 header
   background-color: rgba(30,28,28,0.4)
   width: 100%
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 20
+
 main
     margin: 0 auto
 h2
@@ -78,6 +75,7 @@ h2
   color: #fbd817
   font-style: normal
   font-size: 3.6rem
+  margin-bottom: 30px
   +tab
     font-size: 4rem
     margin-bottom: 38px
@@ -121,7 +119,7 @@ footer
   height: 50px
   right: 0
   top: 0
-  z-index: 10
+  z-index: 30
   +pc
     display: none
 
@@ -130,6 +128,7 @@ footer
     position: absolute
     border-radius: 2px
     background: #fbd817
+    transition: all .4s
     width: 45%
     height: 3px
     left: 12px
@@ -140,21 +139,49 @@ footer
     &:nth-of-type(3)
       top: 31px
 
+  /*activeのとき×記号にする*/
+.humberger.active
+  span.humberger-line
+    &:nth-of-type(1)
+      top: 18px
+      left: 18px
+      transform: translateY(6px) rotate(-45deg)
+      width: 30%
+.humberger.active
+  span.humberger-line
+    &:nth-of-type(2) 
+      opacity: 0
+
+.humberger.active
+  span.humberger-line
+    &:nth-of-type(3)
+      top: 30px
+      left: 18px
+      transform: translateY(-6px) rotate(45deg)
+      width: 30%
+
+
   /*navSPのとき*/
 .nav_menu_SP
-  max-width: 90%
+  position: fixed
+  top: 0
+  right: -100%
+  width: 90%
   text-align: center
   height: 100vh
-  background-color: #1e2c4d
+  background-color: rgba(30, 44, 77, 0.9)
   padding: 30px
-  display: none    
+  margin: 0 0 0 auto
+  z-index: 20
+  transition: all .6s
   ul.menu
     margin-top: 38px 
     li
       margin-bottom: 38px
 
   /*スマホactive時*/
-
+.nav_menu_SP.active
+  right: 0
 
 
 /*PC以上の時*/

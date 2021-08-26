@@ -118,3 +118,10 @@ $tab: 520px // タブレット
   border-right: 65px solid transparent
   display: block
   width: 0
+
+    &:active
+    background:#1e2c4d
+
+    $(".humberger").click(function () {
+  $(this).toggleClass("active");
+});
