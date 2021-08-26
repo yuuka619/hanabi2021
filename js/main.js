@@ -10,5 +10,5 @@ $('.humberger').click(function () {
 
 /*リンクボタン押したら引っ込む*/
 $(".sp-menu_item").click(function () {
-  $(".nav_menu_SP").removeClass("active");
+  $(".humberger,.nav_menu_SP").removeClass("active");
 });
