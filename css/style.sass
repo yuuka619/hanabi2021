@@ -94,17 +94,19 @@ section
   +tab
     padding: 80px 20px 100px 
 
-
 footer
   width: 100%
-  background-color: #1e2c4d
+  //background-color: #1e2c4d
+  background: url('../image/3.png') center / cover
+  background-color: rgba(30,44,77,0.9)
+  background-blend-mode: darken
+
 
 
 
 /*------------------------
           header
   ------------------------*/
-
 .header_inner  
   font-family: ten-mincho,serif
   +pc
@@ -198,7 +200,7 @@ footer
   ul.menu
     +pc
     display: flex
-    justify-content: center
+    justify-content: space-around
   li
     +pc
       margin-right: 40px
@@ -234,12 +236,29 @@ footer
 /*------------------------
           FV
   ------------------------*/
+.scroll
+  position: absolute
+  bottom: 2%
+  right: 1%
+  animation: arrowmove 1.8s ease-in-out infinite
+  -webkit-writing-mode: vertical-rl
+  writing-mode: vertical-rl
+  z-index: 30
+  letter-spacing: 1.3px
+@keyframes arrowmove
+  0%
+    bottom: 2%
+  50%
+    bottom: 4%
+  100%
+    bottom: 2%
+    
 
 .mainImage-area
   background: url('../image/asset_01.jpg') center / cover
   position: relative
   width: 100%
-  height: 80vh
+  height: 90vh
   overflow: hidden
   +tab
     height: 650px
@@ -284,6 +303,8 @@ footer
   -----------------------*/
 .topMessage
   +bg-hanabi
+  background-color: rgba(30,28,28,0.7)
+  background-blend-mode: darken
 
 .topMessage-catch
   text-align: center
@@ -300,7 +321,7 @@ footer
   border-radius: 18px 
   padding: 40px
   max-width: 600px
-  margin: 0 auto
+  margin: 0 auto 60px
   +pc
     padding: 40px
   dl
@@ -320,7 +341,11 @@ footer
 .section-midokoro
   background-color: #141313
   max-width: 1024px
-  margin: 0 auto 40px
+  margin: 0 auto
+  padding-bottom: 20px
+  +tab
+    margin-bottom: 80px
+
 .midokoro_inner
   +bg-hanabi
   background-size: 20%
@@ -409,7 +434,7 @@ a.ticket_button
   font-weight: bold
   padding: 18px
   box-shadow: 3px 3px #27b5ae
-  margin-bottom: 20px
+  margin-bottom: 44px
   margin-top: 40px
   &:hover
     box-shadow: 0 0
@@ -587,7 +612,9 @@ iframe
     margin-bottom: 20px
     +pc
       &:hover
-        background: url('../image/bg-hanabi.png')
+        //background: url('../image/bg-hanabi.png')
+        background-color: rgba(255,255,255,0.8)
+        background-blend-mode: hard-light
 
   /*SNS*/
 .footer_snsIconArea
