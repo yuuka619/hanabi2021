@@ -8,7 +8,14 @@ $('.humberger').click(function () {
   }
 });
 
-/*リンクボタン押したら引っ込む*/
-$(".sp-menu_item").click(function () {
-  $(".humberger,.nav_menu_SP").removeClass("active");
+
+/*スムーススクロール*/
+$('a[href^="#"]').click(function () {
+  var speed = 500;
+  var href = $(this).attr("href");
+  var target = $(href == "#" || href == "" ? "html" : href);
+  var position = target.offset().top;
+  $(".sp-menu_item").removeClass("active");
+  $("body,html").animate({ scrollTop: position }, speed, "swing");
+  return false;
 });
