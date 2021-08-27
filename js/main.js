@@ -15,7 +15,7 @@ $('a[href^="#"]').click(function () {
   var href = $(this).attr("href");
   var target = $(href == "#" || href == "" ? "html" : href);
   var position = target.offset().top;
-  $(".sp-menu_item").removeClass("active");
+  $(".humberger,.nav_menu_SP").removeClass("active");
   $("body,html").animate({ scrollTop: position }, speed, "swing");
   return false;
 });
