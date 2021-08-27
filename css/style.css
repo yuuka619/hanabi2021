@@ -9,6 +9,9 @@
   ------------------------*/
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
 }
 
 body {
@@ -62,7 +65,6 @@ h3 {
 section {
   text-align: center;
   padding: 80px 20px 0;
-  margin: 0 0 60px 0;
   /*------------------------
           変数
     -----------------------*/
@@ -70,7 +72,7 @@ section {
 
 @media (min-width: 520px) {
   section {
-    margin: 0 auto 120px;
+    padding: 80px 20px 100px;
   }
 }
 
@@ -83,6 +85,7 @@ footer {
           header
   ------------------------*/
 .header_inner {
+  font-family: ten-mincho,serif;
   margin: 0 auto;
   max-width: 1024px;
 }
@@ -155,18 +158,19 @@ footer {
 }
 
 .nav_menu_SP {
+  border: solid 5px #FBD817;
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 90%;
+  left: -120vw;
+  width: 100vw;
   text-align: center;
   height: 100vh;
-  background-color: rgba(30, 44, 77, 0.9);
-  padding: 30px;
+  background-color: rgba(30, 44, 77, 0.95);
+  padding: 25px;
   margin: 0 0 0 auto;
   z-index: 20;
-  -webkit-transition: all .6s;
-  transition: all .6s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   /*スマホactive時*/
 }
 
@@ -179,7 +183,7 @@ footer {
 }
 
 .nav_menu_SP.active {
-  right: 0;
+  left: 0;
 }
 
 /*PC以上の時*/
@@ -377,8 +381,9 @@ footer {
         見どころ
   -----------------------*/
 .section-midokoro {
+  background-color: #141313;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .midokoro_inner {
@@ -553,7 +558,7 @@ a.ticket_button {
   padding: 18px;
   -webkit-box-shadow: 3px 3px #27b5ae;
           box-shadow: 3px 3px #27b5ae;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
   margin-top: 40px;
 }
 
@@ -711,7 +716,7 @@ a.ticket_button:hover {
   padding: 14px;
   font-weight: bold;
   -webkit-text-decoration: #E73462 underline 2px;
-          text-decoration: #E73462 underline 2px;
+  text-decoration: #E73462 underline 2px;
 }
 
 .map_wrapper {
@@ -726,7 +731,7 @@ iframe {
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 650px;
+  max-height: 550px;
 }
 
 .ship_bg {

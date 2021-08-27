@@ -53,6 +53,9 @@ $tab: 520px // タブレット
 
 html
   font-size: 62.5%
+  scroll-behavior: smooth
+  -webkit-scroll-behavior: smooth
+  -moz-scroll-behavior: smooth
   
 body
   font-family: "MS Pゴシック",sans-serif
@@ -91,9 +94,9 @@ h3
 section
   text-align: center
   padding: 80px 20px 0
-  margin: 0 0 60px 0
   +tab
-    margin: 0 auto 120px
+    padding: 80px 20px 100px 
+
 
 footer
   width: 100%
@@ -105,7 +108,8 @@ footer
           header
   ------------------------*/
 
-.header_inner
+.header_inner  
+  font-family: ten-mincho,serif
   +pc
   margin: 0 auto
   max-width: 1024px 
@@ -163,17 +167,18 @@ footer
 
   /*navSPのとき*/
 .nav_menu_SP
+  border: solid 5px #FBD817
   position: fixed
   top: 0
-  right: -100%
-  width: 90%
+  left: -120vw
+  width: 100vw
   text-align: center
   height: 100vh
-  background-color: rgba(30, 44, 77, 0.9)
-  padding: 30px
+  background-color: rgba(30, 44, 77, 0.95)
+  padding: 25px
   margin: 0 0 0 auto
   z-index: 20
-  transition: all .6s
+  transition: all .4s
   ul.menu
     margin-top: 38px 
     li
@@ -181,7 +186,10 @@ footer
 
   /*スマホactive時*/
 .nav_menu_SP.active
-  right: 0
+  left: 0
+
+.sp-menu_item
+  baciground: 
 
 
 /*PC以上の時*/
@@ -229,13 +237,7 @@ footer
 /*------------------------
           FV
   ------------------------*/
-// .mainImage_wrapper
-//   background: url('../image/asset_01.jpg') center / cover
-//   position: relative
-//   width: 100%
-//   height: 90vh
-//   +tab
-//     max-height: 650px
+
 .mainImage-area
   background: url('../image/asset_01.jpg') center / cover
   position: relative
@@ -319,8 +321,9 @@ footer
         見どころ
   -----------------------*/
 .section-midokoro
+  background-color: #141313
   max-width: 1024px
-  margin: 0 auto
+  margin: 0 auto 40px
 .midokoro_inner
   +bg-hanabi
   background-size: 20%
@@ -409,7 +412,7 @@ a.ticket_button
   font-weight: bold
   padding: 18px
   box-shadow: 3px 3px #27b5ae
-  margin-bottom: 120px
+  margin-bottom: 20px
   margin-top: 40px
   &:hover
     box-shadow: 0 0
@@ -503,6 +506,8 @@ a.ticket_button
     padding: 14px
     .strong
     font-weight: bold
+    -webkit-text-decoration:#E73462 underline 2px
+    -moz-text-decoration:#E73462 underline 2px
     text-decoration:#E73462 underline 2px
 
 
@@ -512,13 +517,14 @@ a.ticket_button
 	width: 100%
 	padding-top: 56.25%
 
+
 iframe
   position: absolute
   top: 0
   left: 0
   width: 100%
   height: 100%
-  max-height: 650px
+  max-height: 550px
 
 .ship_bg
   background: url("../image/ship@2x.png") no-repeat center bottom
