@@ -76,7 +76,7 @@ $(window).on('load', function () {
 
 
 
-//ぽよん
+//タイトルぽよん
 gsap.from("#catch-niman",{
   scrollTrigger: {
     trigger: "#catch-niman",
