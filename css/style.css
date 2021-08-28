@@ -64,7 +64,7 @@ h3 {
 
 section {
   text-align: center;
-  padding: 90px 20px 0;
+  padding: 90px 20px;
   background-color: #1e1c1c;
   /*------------------------
           変数
@@ -368,6 +368,7 @@ footer {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 
