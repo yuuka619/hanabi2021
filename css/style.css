@@ -536,7 +536,6 @@ section.news {
         見どころ
   -----------------------*/
 .section-midokoro {
-  background-color: #141313;
   padding-bottom: 20px;
   /*------------------------
           変数
@@ -550,12 +549,23 @@ section.news {
 }
 
 .midokoro_inner {
+  padding: 40px 12px;
   background-image: url("../image/bg-hanabi@2x.png");
   background-repeat: no-repeat;
   background-size: 20%;
   background-position: right top;
-  max-width: 1024px;
-  margin: 0 auto;
+  background-color: #141313;
+  /*------------------------
+          変数
+    -----------------------*/
+}
+
+@media (min-width: 520px) {
+  .midokoro_inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
 }
 
 .flexbox_pc {
