@@ -125,3 +125,15 @@ $tab: 520px // タブレット
     $(".humberger").click(function () {
   $(this).toggleClass("active");
 });
+
+
+
+/*固定の為*/
+.bg-fixed
+  position: fixed
+  z-index: 1
+  top: 0
+  /*背景表示*/
+  width: 100%
+  height: 100vh
+  

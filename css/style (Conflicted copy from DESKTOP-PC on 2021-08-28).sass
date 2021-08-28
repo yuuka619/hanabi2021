@@ -55,13 +55,10 @@ html
   font-size: 62.5%
   
 body
-  
   font-family: "MS Pゴシック",sans-serif
   font-size: 1.5rem
+  background-color: #1e1c1c
   color: #fff
-  .body_inner
-    background-color: #1e1c1c
-
 
 img
   max-width: 100%
@@ -71,7 +68,7 @@ header
   width: 100%
 
 main
-  margin: 0 auto
+    margin: 0 auto
 h2
   font-family: ta-f1blockline, sans-serif
   font-weight: 400
@@ -93,10 +90,9 @@ h3
 
 section
   text-align: center
-  padding: 90px 20px 0
-  background-color: #1e1c1c
+  padding: 80px 20px 0
   +tab
-    padding: 90px 20px 100px 
+    padding: 80px 20px 100px 
 
 footer
   width: 100%
@@ -177,55 +173,25 @@ footer
   text-align: center
   font-size: 1.9rem
   height: 100vh
-  background-color: rgba(30, 44, 77, 0.5)
-  background-image: url('../image/nav_bg02.png')
-  background-position: 50%
-  background-size: cover
-  background-blend-mode: color-burn
+  background-color: rgba(30, 44, 77, 0.95)
   padding-top: 7.5rem
   margin: 0 0 0 auto
   z-index: 20
   transition: all .6s
   ul.menu
-    margin-top: 42px 
-    li.sp-menu_item
-      opacity: 0
-    li.sp-menu_item.active
-      padding: 36px
+    margin-top: 38px 
+    li
+      background-color: pink
+      margin-bottom: 38px
       text-align: center
-      position: relative
-      bottom: -10px
-      &:nth-child(1)
-        -webkit-animation: li-display 0.5s ease 0.6s 1 forwards
-        animation: li-display 0.5s ease 0.6s 1 forwards
-      &:nth-child(2) 
-        -webkit-animation: li-display 0.5s ease .8s 1 forwards
-        animation: li-display 0.5s ease .8s 1 forwards
-      &:nth-child(3) 
-        -webkit-animation: li-display 0.5s ease 1s 1 forwards
-        animation: li-display 0.5s ease 1s 1 forwards
-      &:nth-child(4) 
-        -webkit-animation: li-display 0.5s ease 1.2s 1 forwards
-        animation: li-display 0.5s ease 1.2s 1 forwards
-      &:nth-child(5) 
-        -webkit-animation: li-display 0.5s ease 1.4s 1 forwards
-        animation: li-display 0.5s ease 1.4s 1 forwards
-      &:nth-child(6) 
-        -webkit-animation: li-display 0.5s ease 1.6s 1 forwards
-        animation: li-display 0.5s ease 1.6s 1 forwards
-      
-@-webkit-keyframes li-display
-  100%
-    opacity: 1
-    bottom: 0
-@keyframes li-display
-  100% 
-    opacity: 1
-    bottom: 0
+
 
   /*スマホactive時*/
 .nav_menu_SP.active
   bottom: 0
+
+.sp-menu_item
+  baciground: 
 
 
 /*PC以上の時*/
@@ -280,7 +246,7 @@ footer
   animation: arrowmove 1.8s ease-in-out infinite
   -webkit-writing-mode: vertical-rl
   writing-mode: vertical-rl
-  z-index: 19
+  z-index: 30
   letter-spacing: 1.3px
 @keyframes arrowmove
   0%
@@ -295,7 +261,7 @@ footer
   background: url('../image/asset_01.jpg') center / cover
   position: relative
   width: 100%
-  height: 80vh
+  height: 90vh
   overflow: hidden
   +tab
     height: 650px
@@ -309,20 +275,6 @@ footer
       left: 50%
       transform: translate(-50%, -50%)
 
-/*ここから*/
-/*固定の為*/
-.bg-fixed
-  position: fixed
-  z-index: 1
-  top: 0
-
-section,footer
-  position: relative
-  z-index: 2
-/*ここまで*/
-
-
-/*上にかぶせるドットフィルタ*/
 .mainImage_wrapper
   &:after 
     +tab
@@ -341,6 +293,7 @@ section,footer
 .fixed
   position: sticky
 
+
 .mainImage-logo
   position: absolute
   inset: 0
@@ -353,47 +306,25 @@ section,footer
   -----------------------*/
 .topMessage
   +bg-hanabi
-  background-size: 34%
-  background-color: rgba(30,28,28,1)
-  background-blend-mode: hard-light
+  background-color: rgba(30,28,28,0.7)
+  background-blend-mode: darken
 
 .topMessage-catch
   text-align: center
   line-height: 2
-
-.glowAnime
-  span
-    opacity: 0
-  +tab
-    font-size: 2.6rem
-.glowAnime.glow
-  span
-    -webkit-animation: glow_anime_on 5s ease-out 4s forwards
-    animation: glow_anime_on 5s ease-out 4s forwards
-
-@keyframes glow_anime_on
-	0%
-    opacity: 0
-    text-shadow: 0 0 0 #fff, 0 0 0 #fff
-	50% 
-    opacity: 1
-    text-shadow: 0 0 10px #fff, 0 0 15px #fff
-	100%
-    opacity: 1
-    text-shadow: 0 0 0 #fff, 0 0 0 #fff
+  h3
+    +tab
+      font-size: 2.4rem
 
 /*------------------------
         更新情報 
   -----------------------*/
-section.news
-  padding-bottom: 80px
-
 .news_wrapper
   background: rgba(255,255,255,0.1)
   border-radius: 18px 
   padding: 40px
   max-width: 600px
-  margin: 0 auto
+  margin: 0 auto 60px
   +pc
     padding: 40px
   dl
@@ -412,17 +343,16 @@ section.news
   -----------------------*/
 .section-midokoro
   background-color: #141313
-
+  max-width: 1024px
+  margin: 0 auto
   padding-bottom: 20px
   +tab
-    padding-bottom: 80px
+    margin-bottom: 80px
 
 .midokoro_inner
   +bg-hanabi
   background-size: 20%
   background-position: right top
-  max-width: 1024px
-  margin: 0 auto
 
 .flexbox_pc
   margin-top: 10px
@@ -522,7 +452,7 @@ a.ticket_button
   height: auto
   background: url(../image/asset05.jpg) no-repeat left center / cover
   object-fit: contain
-  padding-bottom: 100px
+  padding-bottom: 80px
   width: 100vw
 
 .hanabi-bg
@@ -622,7 +552,7 @@ iframe
   max-height: 550px
 
 .ship_bg
-  background: url("../image/ship@2x.png") no-repeat
+  background: url("../image/ship@2x.png") no-repeat center bottom
   background-size: contain
   width: 120px
   height: 120px
@@ -636,6 +566,7 @@ iframe
 .section-attention
   +bg-hanabi
   +tab
+  background-position: right bottom
   background-size: 26%
 .attention_wrapper
   padding-bottom: 120px
