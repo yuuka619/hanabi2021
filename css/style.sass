@@ -58,6 +58,8 @@ body
   color: #fff
   .body_inner
     background-color: #1e1c1c
+    position: relative
+    z-index: 1
 
 img
   max-width: 100%
@@ -88,6 +90,9 @@ h3
   margin-bottom: 32px
 
 section
+  position: -webkit-sticky
+  position: sticky
+
   text-align: center
   padding: 90px 20px
   background-color: #1e1c1c
@@ -95,14 +100,14 @@ section
     padding: 90px 20px 100px 
 
 footer
+  position: relative
+  z-index: 2
+
   width: 100%
   //background-color: #1e2c4d
   background: url('../image/footer_bg@3x-min.png') no-repeat center / cover
   background-color: rgba(30,44,77,0.9)
   background-blend-mode: darken
-
-
-
 
 /*------------------------
           header
@@ -173,7 +178,6 @@ footer
   text-align: center
   font-size: 1.9rem
   height: 100vh
-  background-color: rgba(30, 44, 77, 0.5)
   background-image: url('../image/nav_bg02.png')
   background-position: 50%
   background-size: cover
@@ -310,12 +314,10 @@ footer
 /*固定の為*/
 .bg-fixed
   position: fixed
-  z-index: 1
+  z-index: 0
   top: 0
 
-section,footer
-  position: relative
-  z-index: 2
+
 /*ここまで*/
 
 
@@ -337,7 +339,7 @@ section,footer
 
 .fixed
   position: sticky
-
+  top: 0
 .mainImage-logo
   position: absolute
   inset: 0
